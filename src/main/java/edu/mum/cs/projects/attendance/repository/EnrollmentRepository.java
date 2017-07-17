@@ -10,5 +10,5 @@ import edu.mum.cs.projects.attendance.domain.entity.Student;
 
 @Repository
 public interface EnrollmentRepository extends CrudRepository<Enrollment, String> {
-	List<Enrollment> findByStudent(Student s);
+	List<Enrollment> findByStudent(Student student);
 }

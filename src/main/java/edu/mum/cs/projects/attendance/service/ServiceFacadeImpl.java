@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
 
 import edu.mum.cs.projects.attendance.domain.StudentAttendance;
@@ -46,9 +47,17 @@ public class ServiceFacadeImpl implements IServiceFacade {
 	private AcademicBlockRepository academicBlockRepository;
 	
 	@Override
-	public List<Course> getCourseListForStudent(String studentID) {
+	public List<CourseOffering> getCourseListForStudent(String studentID) {
 		// TODO Auto-generated method stub
-		return null;
+			Student student = studentService.findStudentById(studentID);
+			List<Enrollment> enrollmentList = enrollmentService.getEnrollmentByStudent(student);
+			List<CourseOffering> courseList = new ArrayList<>();
+			for(Enrollment enrollment : enrollmentList){
+					CourseOffering course = enrollment.getOffering();
+					courseList.add(course);
+			}
+			System.out.println("courseList" +courseList.get(0));
+			return courseList;	
 	}
 
 	@Override

@@ -6,12 +6,13 @@ import java.util.List;
 import edu.mum.cs.projects.attendance.domain.StudentAttendance;
 import edu.mum.cs.projects.attendance.domain.entity.BarcodeRecord;
 import edu.mum.cs.projects.attendance.domain.entity.Course;
+import edu.mum.cs.projects.attendance.domain.entity.CourseOffering;
 import edu.mum.cs.projects.attendance.domain.entity.Student;
 import edu.mum.cs.projects.attendance.domain.entity.User;
 
 public interface IServiceFacade {
 	//using for student
-    public List<Course> getCourseListForStudent(String studentID);
+    public List<CourseOffering> getCourseListForStudent(String studentID);
     public List<StudentAttendance> getCourseAttendance(String courseID);
 	
 	//using for user

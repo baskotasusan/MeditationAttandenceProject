@@ -1,4 +1,4 @@
-package edu.mum.cs.projects.attendance.controller;
+/*package edu.mum.cs.projects.attendance.controller;
 
 
 import java.util.List;
@@ -49,7 +49,7 @@ public class HomeController {
 	@Autowired
 	private AttendanceServiceImpl attendanceServiceImpl;
 
-	/*
+	
 	 * @GetMapping({ "/", "/index", "/home" }) public ModelAndView homePage() {
 	 * ModelAndView modelAndView = new ModelAndView("home"); Collection<?
 	 * extends GrantedAuthority> authorities =
@@ -59,12 +59,12 @@ public class HomeController {
 	 * ? "ADMIN" : "USER");
 	 * 
 	 * return modelAndView; }
-	 */
+	 
 
-	/*@GetMapping("/")
+	@GetMapping("/")
 	public String homePage() {
 		return "home";
-	}*/
+	}
 
 	@GetMapping("/")
 	public ModelAndView homePage() {
@@ -179,11 +179,12 @@ public class HomeController {
 		return "studentAttendance";
 		
 	}
-	/*
+	
 	 * public String addStudent(Model model){
 	 * 
 	 * studentServiceImpl.save(Student student)
 	 * 
 	 * model.addAttribute("students", student); }
-	 */
+	 
 }
+*/
